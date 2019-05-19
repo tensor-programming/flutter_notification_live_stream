@@ -22,7 +22,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  FlutterLocalNotificationsPlugin localNotificationsPlugin = FlutterLocalNotificationsPlugin();
+  FlutterLocalNotificationsPlugin localNotificationsPlugin =
+      FlutterLocalNotificationsPlugin();
   initializeNotifications() async {
     var initializeAndroid = AndroidInitializationSettings('ic_launcher');
     var initializeIOS = IOSInitializationSettings();
@@ -69,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Icon(Icons.notifications),
         onPressed: () async {
           DateTime now = DateTime.now().toUtc().add(
-                Duration(seconds: 5),
+                Duration(seconds: 10),
               );
           await singleNotification(
             now,
